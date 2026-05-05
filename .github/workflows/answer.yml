@@ -1,0 +1,46 @@
+name: 法考每日一题 - 答案推送
+
+on:
+  # 每天晚上8点（UTC 12:00 = 北京 20:00）
+  schedule:
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: '推送模式'
+        required: true
+        default: 'answer'
+        type: choice
+        options:
+          - question
+          - answer
+
+jobs:
+  push-answers:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Push daily answers
+        env:
+          PUSH_MODE: ${{ github.event.inputs.mode || 'answer' }}
+          SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
+        run: python main.py
+
+      - name: Commit state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "✅ Update state - answers pushed"
+          git push
