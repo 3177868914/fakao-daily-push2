@@ -1,0 +1,59 @@
+{
+  "teachers": [
+    {
+      "name": "柏浪涛",
+      "weibo_name": "柏浪涛的刑法观",
+      "subject": "刑法",
+      "uid": "2523185197",
+      "question_keywords": ["每日一题", "刑法每日一题", "每日练习"],
+      "answer_keywords": ["答案", "解析", "每日一题答案"]
+    },
+    {
+      "name": "孟献贵",
+      "weibo_name": "民商法孟献贵",
+      "subject": "民法",
+      "uid": "2342740757",
+      "question_keywords": ["每日一题", "民法每日一题", "每日练习"],
+      "answer_keywords": ["答案", "解析", "每日一题答案"]
+    },
+    {
+      "name": "戴鹏",
+      "weibo_name": "法律人戴鹏",
+      "subject": "民诉法",
+      "uid": "2758385724",
+      "question_keywords": ["每日一题", "民诉每日一题", "每日练习"],
+      "answer_keywords": ["答案", "解析", "每日一题答案"]
+    },
+    {
+      "name": "左宁",
+      "weibo_name": "左宁刑诉",
+      "subject": "刑诉法",
+      "uid": "3153511812",
+      "question_keywords": ["每日一题", "刑诉每日一题", "每日练习"],
+      "answer_keywords": ["答案", "解析", "每日一题答案"]
+    },
+    {
+      "name": "李佳",
+      "weibo_name": "行政法李佳",
+      "subject": "行政法",
+      "uid": "1552849431",
+      "question_keywords": ["每日一题", "行政法每日一题", "每日练习"],
+      "answer_keywords": ["答案", "解析", "每日一题答案"]
+    },
+    {
+      "name": "杨帆",
+      "weibo_name": "三国法杨帆",
+      "subject": "三国法",
+      "uid": "2629450315",
+      "question_keywords": ["每日一题", "三国法每日一题", "每日练习"],
+      "answer_keywords": ["答案", "解析", "每日一题答案"]
+    }
+  ],
+  "settings": {
+    "push_hour_question": 8,
+    "push_hour_answer": 20,
+    "max_posts_per_teacher": 10,
+    "recent_hours": 48,
+    "state_max_ids": 1000
+  }
+}
